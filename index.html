@@ -1,326 +1,398 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./image/Untitled.png">
-    <link rel="stylesheet" href="./styles.css">
-    <title>PamirCola Group of Companies</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pamir Cola Group of Companies: more than 60 brands of juices, dairy, soft drinks, energy drinks and snacks made in Afghanistan.">
+  <meta name="theme-color" content="#0056b3">
+  <title data-i18n="titleIndex">Pamir Cola Group of Companies</title>
+  <link rel="icon" type="image/png" href="./image/Untitled.png">
+  <link rel="stylesheet" href="./styles.css">
+  <script>
+  (function () {
+    var d = document.documentElement;
+    try {
+      var th = localStorage.getItem('pc-theme');
+      if (!th && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) th = 'dark';
+      d.setAttribute('data-theme', th === 'dark' ? 'dark' : 'light');
+      if (localStorage.getItem('pc-lang') === 'fa') { d.lang = 'fa-AF'; d.dir = 'rtl'; }
+    } catch (e) {}
+    d.classList.add('js');
+  })();
+</script>
 </head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
 
-<body class="ligh">
-    <section id="header-banner">
-        <div class="header font">
-            <ul>
-                <li><img src="./image/logo81X81.png" alt="SuperCola logo"></li>
-                <li class="border-animation"><a href="#header-banner" data-key="hl1">Home</a></li>
-                <li class="border-animation"><a href="./about-us.html" data-key="hl2">About Us</a></li>
-                <li class="border-animation"><a href="#brands" data-key="hl3">Brands</a></li>
-                <li class="border-animation"><a href="./videos.html" data-key="hl4">Videos</a></li>
-                <li class="border-animation"><a href="#footer" data-key="hl6">Contact Us</a></li>
-                <li><button id="moodButton" class="btn" data-key="hl7">Dark Mode</button></li>
-                <li><button class="btn" id="language" data-key="hl8">English</button></li>
-            </ul>
-        </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="PamirCola Group of Companies, home">
+        <img src="./image/logo81X81.png" alt="" width="44" height="44" data-optional>
+        <span class="brand-text">Pamir<span>Cola</span></span>
+      </a>
 
-        <div class="img">
-            <img src="./image/header.jpg" alt="SuperCola banner">
-            <h1 class="font" data-key="header1">PamirCola Group Of Companies</h1>
+      <nav id="site-nav" class="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page" data-i18n="navHome">Home</a></li>
+          <li><a href="index.html#products" data-i18n="navProducts">Products</a></li>
+          <li><a href="index.html#brands" data-i18n="navBrands">Brands</a></li>
+          <li><a href="about-us.html" data-i18n="navAbout">About Us</a></li>
+          <li><a href="videos.html" data-i18n="navVideos">Videos</a></li>
+          <li><a href="about-us.html#contact" data-i18n="navContact">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-tools">
+        <button id="themeBtn" class="tool-btn" type="button" aria-label="Dark mode">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <span class="tool-label" data-i18n="themeDark">Dark mode</span>
+        </button>
+        <button id="langBtn" class="tool-btn" type="button" lang="fa-AF" aria-label="Switch language to Dari">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          <span class="tool-label" data-i18n="langBtn">دری</span>
+        </button>
+        <button id="menuBtn" class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n-aria="menu" aria-label="Menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-inner">
+          <span class="eyebrow" data-i18n="heroEyebrow">Made in Afghanistan</span>
+          <h1 id="hero-title" data-i18n="heroTitle">Pamir Cola Group of Companies</h1>
+          <p class="lead" data-i18n="heroLead">Afghanistan's leading producer of juices, dairy, soft drinks and snacks — enjoyed at home and exported worldwide.</p>
+          <div class="hero-actions">
+            <a class="btn btn-light" href="#products"><span data-i18n="ctaProducts">Explore products</span> <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-ghost" href="videos.html" data-i18n="ctaVideos">Watch videos</a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <section id="products">
-        <div class="header">
-            <h2 class="font" data-key="header2">We produce more than 60 brands loacally and globally</h2>
-        </div>
+    <div class="stats container">
+      <ul aria-label="Pamir Cola at a glance">
+        <li><strong>60+</strong><span data-i18n="stat1">Brands</span></li>
+        <li><strong>3</strong><span data-i18n="stat2">Locations</span></li>
+        <li><strong>6</strong><span data-i18n="stat3">Product lines</span></li>
+      </ul>
+    </div>
 
-        <!-- -----------------------Dairies------------------------------ -->
-        <h3 data-key="header31">Hi Dairies</h3>
-        <div class="dairies container">
-            <div>
-                <p>Hi - Banana Milk</p>
-                <img src="./dairy/hi-banana-milk.png" alt="banana milk" class="slide">
-            </div>
-            <div>
-                <p>Hi - Cheese Labench</p>
-                <img src="./dairy/Hi-Cheese-Big-size.png" alt="cheese big" class="slide">
-            </div>
-            <div>
-                <p>Hi - Cheese</p>
-                <img src="./dairy/Hi-Cheese.png" alt="cheese" class="slide">
-            </div>
-            <div>
-            <p>Hi - Chocolate Milk</p>
-            <img src="./dairy/Hi-Chocolate-milk.png" alt="chocolate" class="slide">
-            </div>
-            <div>
-                <p>Hi - Breakfast Cream</p>
-                <img src="./dairy/Hi-Cream.png" alt="cream" class="slide">
-            </div>
-            <div>
-                <p>Hi - Pistachio Milk</p>
-                <img src="./dairy/hi-pistachi.png" alt="pistachi" class="slide">
-            </div>
-            <div>
-                <p>Hi - Milk</p>
-                <img src="./dairy/Milk.jpg" alt="milk" class="slide">
-            </div>
-        </div>    
-        <!-- -----------------------Nectar------------------------------ -->
-        <h3 data-key="header32">Shafa Natural Nectar Drinks</h3>
-        <div class="nectar container">
-            <div>
-                <p class="font2">Nectar - Apple</p>
-                <img src="./shafa nectar/Apple-600x600.png" alt="banana milk" class="slide">
-            </div>
-            <div>
-                <p>Nectar - Mango</p>
-                <img src="./shafa nectar/Mango-600x600.png" alt="cheese" class="slide">
-            </div>
-            <div>
-                <p>Nectar - Peach</p>
-                <img src="./shafa nectar/Peach-Image-600x600.png" alt="cream" class="slide">
-            </div>
-            <div>
-                <p>Nectar - Pineapple</p>
-                <img src="./shafa nectar/pineapple-image-600x600.png" alt="milk" class="slide">
-            </div>
-            <div>
-                <p>Nectar - Pomegrante</p>
-                <img src="./shafa nectar/pomegranate-image-600x600.png" alt="milk" class="slide">
-            </div>
-            <div>
-                <p>Nectar - Cherry</p>
-                <img src="./shafa nectar/sourcherry-image-600x600.png" alt="milk" class="slide">
-            </div>
-            <div>
-                <p>Shafa Sour Cherry</p>
-                <img src="./shafa nectar/Sourcherry-Nectar-Small-600x600.png" alt="milk" class="slide">
-            </div>
-            <div>
-                <p>Shafa Apple Nectar</p>
-                <img src="./shafa nectar/Apple-Nectar-Small-600x600.png" alt="cheese big" class="slide">
-            </div>
-            <div>
-                <p>Shafa Mango Nectar</p>
-                <img src="./shafa nectar/Mango-Nectar-Small-600x600.png" alt="chocolate" class="slide">
-            </div>
-            <div>
-                <p>Shafa Peach Nectar</p>
-                <img src="./shafa nectar/Peach-Nectar-Small-600x600.png" alt="pistachi" class="slide">
-            </div>
-            <div>
-                <p>Shafa Pomegrante</p>
-                <img src="./shafa nectar/Pomegranate-nectar-small-600x600.png" alt="milk" class="slide">
-            </div>
+    <section id="products" class="section container" aria-labelledby="products-title">
+      <div class="section-head reveal">
+        <h2 id="products-title" data-i18n="prodTitle">We produce more than 60 brands locally and globally</h2>
+        <p data-i18n="prodLead">Search by name or pick a category to find a product.</p>
+      </div>
+
+      <div class="toolbar">
+        <div class="search" role="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <label class="visually-hidden" for="search" data-i18n="searchLabel">Search products</label>
+          <input id="search" type="search" autocomplete="off" placeholder="Search: mango, cola, cheese…" data-i18n-placeholder="searchPh">
+          <button id="clearSearch" class="clear" type="button" hidden data-i18n-aria="clearSearch" aria-label="Clear search">&times;</button>
         </div>
-        <!-- ----------------------------------Pomegrante------------------------------- -->
-        <h3 data-key="header33">Shafa Pomegrante Drinks</h3>
-        <div class="pomegrante container">
-            <div>
-                <p>Pomegrante Drink</p>
-                <img src="./pomegrante/Shafa-Pomegranate-Drink-1.5-L-600x600.png" alt="pomegrante drink">
-            </div>
-            <div>
-                <p>Pomegrante Drink</p>
-                <img src="./pomegrante/Shafa-Pomegranate-Drink-0.5-L-600x600.png" alt="pomegrante drink">
-            </div>
-            <div>
-                <p>Pomegrante Drink</p>
-                <img src="./pomegrante/Shafa-Pomegranate-Drink-250-cc-600x600.png" alt="pomegrante drink">
-            </div>
-            <div>
-                <p>Pomegrante Drink</p>
-                <img src="./pomegrante/Shafa-Pomegranate-Drink-300-600x600.png" alt="pomegrante drink">
-            </div>
+        <div class="chips" role="group" aria-label="Product categories" data-i18n-aria="filterLabel">
+          <button class="chip" type="button" data-filter="all" aria-pressed="true" data-i18n="fAll">All</button>
+          <button class="chip" type="button" data-filter="dairy" aria-pressed="false" data-i18n="cDairy">Dairy</button>
+          <button class="chip" type="button" data-filter="nectar" aria-pressed="false" data-i18n="cNectar">Nectar</button>
+          <button class="chip" type="button" data-filter="pomegranate" aria-pressed="false" data-i18n="cPom">Pomegranate</button>
+          <button class="chip" type="button" data-filter="energy" aria-pressed="false" data-i18n="cEnergy">Energy</button>
+          <button class="chip" type="button" data-filter="soft" aria-pressed="false" data-i18n="cSoft">Soft drinks</button>
+          <button class="chip" type="button" data-filter="chips" aria-pressed="false" data-i18n="cChips">Chips</button>
         </div>
-        <!-- ----------------------------Energy Drinks------------------------- -->
-        <h3 data-key="header34">Energy Drinks</h3>
-        <div class="energy container">
-            <div>
-                <p>Shafa Energy Drink</p>
-                <img src="./energy/EnergyCarabo.png" alt="">
-            </div>
-                    <div>
-                <p>Shafa Energy Drink</p>
-                <img src="./energy/EnergyShafa.png" alt="">
-            </div>
-            <div>
-                <p>Hype - Gold</p>
-                <img src="./energy/Hype-Gold-600x600.png" alt="">
-            </div>        <div>
-                <p>Hype - Marshmallow</p>
-                <img src="./energy/Hype-Marshmallow-600x600.png" alt="">
-            </div>
-            <div>
-                <p>Hype - Maximam</p>
-                <img src="./energy/Hype-Maximum-600x600.png" alt="">
-            </div>
-            <div>
-                <p>Hype - Mojito</p>
-                <img src="./energy/Hype-Mojito-600x600.png" alt="">
-            </div>
+      </div>
+      <p id="resultCount" class="result-count" role="status" aria-live="polite">Showing 43 of 43 products</p>
+
+      <div id="productList">
+        <section class="group" data-group="dairy" aria-labelledby="g-dairy">
+          <h3 id="g-dairy" data-i18n="gDairy">Hi Dairy</h3>
+          <div class="grid">
+            <figure class="product" data-cat="dairy" data-name="Hi Banana Milk">
+              <div class="thumb"><img src="./dairy/hi-banana-milk.png" alt="Hi Banana Milk" width="300" height="300" loading="lazy"></div>
+              <figcaption>Hi Banana Milk</figcaption>
+            </figure>
+            <figure class="product" data-cat="dairy" data-name="Hi Cheese Labneh (large)">
+              <div class="thumb"><img src="./dairy/Hi-Cheese-Big-size.png" alt="Hi Cheese Labneh (large)" width="300" height="300" loading="lazy"></div>
+              <figcaption>Hi Cheese Labneh (large)</figcaption>
+            </figure>
+            <figure class="product" data-cat="dairy" data-name="Hi Cheese">
+              <div class="thumb"><img src="./dairy/Hi-Cheese.png" alt="Hi Cheese" width="300" height="300" loading="lazy"></div>
+              <figcaption>Hi Cheese</figcaption>
+            </figure>
+            <figure class="product" data-cat="dairy" data-name="Hi Chocolate Milk">
+              <div class="thumb"><img src="./dairy/Hi-Chocolate-milk.png" alt="Hi Chocolate Milk" width="300" height="300" loading="lazy"></div>
+              <figcaption>Hi Chocolate Milk</figcaption>
+            </figure>
+            <figure class="product" data-cat="dairy" data-name="Hi Breakfast Cream">
+              <div class="thumb"><img src="./dairy/Hi-Cream.png" alt="Hi Breakfast Cream" width="300" height="300" loading="lazy"></div>
+              <figcaption>Hi Breakfast Cream</figcaption>
+            </figure>
+            <figure class="product" data-cat="dairy" data-name="Hi Pistachio Milk">
+              <div class="thumb"><img src="./dairy/hi-pistachi.png" alt="Hi Pistachio Milk" width="300" height="300" loading="lazy"></div>
+              <figcaption>Hi Pistachio Milk</figcaption>
+            </figure>
+            <figure class="product" data-cat="dairy" data-name="Hi Milk">
+              <div class="thumb"><img src="./dairy/Milk.png" alt="Hi Milk" width="300" height="300" loading="lazy"></div>
+              <figcaption>Hi Milk</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="group" data-group="nectar" aria-labelledby="g-nectar">
+          <h3 id="g-nectar" data-i18n="gNectar">Shafa Natural Nectar Drinks</h3>
+          <div class="grid">
+            <figure class="product" data-cat="nectar" data-name="Nectar Apple">
+              <div class="thumb"><img src="./shafa nectar/Apple-600x600.png" alt="Nectar Apple" width="300" height="300" loading="lazy"></div>
+              <figcaption>Nectar Apple</figcaption>
+            </figure>
+            <figure class="product" data-cat="nectar" data-name="Nectar Mango">
+              <div class="thumb"><img src="./shafa nectar/Mango-600x600.png" alt="Nectar Mango" width="300" height="300" loading="lazy"></div>
+              <figcaption>Nectar Mango</figcaption>
+            </figure>
+            <figure class="product" data-cat="nectar" data-name="Nectar Peach">
+              <div class="thumb"><img src="./shafa nectar/Peach-Image-600x600.png" alt="Nectar Peach" width="300" height="300" loading="lazy"></div>
+              <figcaption>Nectar Peach</figcaption>
+            </figure>
+            <figure class="product" data-cat="nectar" data-name="Nectar Pineapple">
+              <div class="thumb"><img src="./shafa nectar/pineapple-image-600x600.png" alt="Nectar Pineapple" width="300" height="300" loading="lazy"></div>
+              <figcaption>Nectar Pineapple</figcaption>
+            </figure>
+            <figure class="product" data-cat="nectar" data-name="Nectar Pomegranate">
+              <div class="thumb"><img src="./shafa nectar/pomegranate-image-600x600.png" alt="Nectar Pomegranate" width="300" height="300" loading="lazy"></div>
+              <figcaption>Nectar Pomegranate</figcaption>
+            </figure>
+            <figure class="product" data-cat="nectar" data-name="Nectar Sour Cherry">
+              <div class="thumb"><img src="./shafa nectar/sourcherry-image-600x600.png" alt="Nectar Sour Cherry" width="300" height="300" loading="lazy"></div>
+              <figcaption>Nectar Sour Cherry</figcaption>
+            </figure>
+            <figure class="product" data-cat="nectar" data-name="Apple Nectar (small)">
+              <div class="thumb"><img src="./shafa nectar/Apple-Nectar-Small-600x600.png" alt="Apple Nectar (small)" width="300" height="300" loading="lazy"></div>
+              <figcaption>Apple Nectar (small)</figcaption>
+            </figure>
+            <figure class="product" data-cat="nectar" data-name="Mango Nectar (small)">
+              <div class="thumb"><img src="./shafa nectar/Mango-Nectar-Small-600x600.png" alt="Mango Nectar (small)" width="300" height="300" loading="lazy"></div>
+              <figcaption>Mango Nectar (small)</figcaption>
+            </figure>
+            <figure class="product" data-cat="nectar" data-name="Peach Nectar (small)">
+              <div class="thumb"><img src="./shafa nectar/Peach-Nectar-Small-600x600.png" alt="Peach Nectar (small)" width="300" height="300" loading="lazy"></div>
+              <figcaption>Peach Nectar (small)</figcaption>
+            </figure>
+            <figure class="product" data-cat="nectar" data-name="Pomegranate Nectar (small)">
+              <div class="thumb"><img src="./shafa nectar/Pomegranate-nectar-small-600x600.png" alt="Pomegranate Nectar (small)" width="300" height="300" loading="lazy"></div>
+              <figcaption>Pomegranate Nectar (small)</figcaption>
+            </figure>
+            <figure class="product" data-cat="nectar" data-name="Sour Cherry Nectar (small)">
+              <div class="thumb"><img src="./shafa nectar/Sourcherry-Nectar-Small-600x600.png" alt="Sour Cherry Nectar (small)" width="300" height="300" loading="lazy"></div>
+              <figcaption>Sour Cherry Nectar (small)</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="group" data-group="pomegranate" aria-labelledby="g-pomegranate">
+          <h3 id="g-pomegranate" data-i18n="gPom">Shafa Pomegranate Drinks</h3>
+          <div class="grid">
+            <figure class="product" data-cat="pomegranate" data-name="Pomegranate Drink 1.5 L">
+              <div class="thumb"><img src="./pomegrante/Shafa-Pomegranate-Drink-1.5-L-600x600.png" alt="Pomegranate Drink 1.5 L" width="300" height="300" loading="lazy"></div>
+              <figcaption>Pomegranate Drink 1.5 L</figcaption>
+            </figure>
+            <figure class="product" data-cat="pomegranate" data-name="Pomegranate Drink 0.5 L">
+              <div class="thumb"><img src="./pomegrante/Shafa-Pomegranate-Drink-0.5-L-600x600.png" alt="Pomegranate Drink 0.5 L" width="300" height="300" loading="lazy"></div>
+              <figcaption>Pomegranate Drink 0.5 L</figcaption>
+            </figure>
+            <figure class="product" data-cat="pomegranate" data-name="Pomegranate Drink 250 ml">
+              <div class="thumb"><img src="./pomegrante/Shafa-Pomegranate-Drink-250-cc-600x600.png" alt="Pomegranate Drink 250 ml" width="300" height="300" loading="lazy"></div>
+              <figcaption>Pomegranate Drink 250 ml</figcaption>
+            </figure>
+            <figure class="product" data-cat="pomegranate" data-name="Pomegranate Drink 300 ml">
+              <div class="thumb"><img src="./pomegrante/Shafa-Pomegranate-Drink-300-600x600.png" alt="Pomegranate Drink 300 ml" width="300" height="300" loading="lazy"></div>
+              <figcaption>Pomegranate Drink 300 ml</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="group" data-group="energy" aria-labelledby="g-energy">
+          <h3 id="g-energy" data-i18n="gEnergy">Energy Drinks</h3>
+          <div class="grid">
+            <figure class="product" data-cat="energy" data-name="Shafa Energy Drink">
+              <div class="thumb"><img src="./energy/EnergyShafa.png" alt="Shafa Energy Drink" width="300" height="300" loading="lazy"></div>
+              <figcaption>Shafa Energy Drink</figcaption>
+            </figure>
+            <figure class="product" data-cat="energy" data-name="Carabo Energy Drink">
+              <div class="thumb"><img src="./energy/EnergyCarabo.png" alt="Carabo Energy Drink" width="300" height="300" loading="lazy"></div>
+              <figcaption>Carabo Energy Drink</figcaption>
+            </figure>
+            <figure class="product" data-cat="energy" data-name="Hype Gold">
+              <div class="thumb"><img src="./energy/Hype-Gold-600x600.png" alt="Hype Gold" width="300" height="300" loading="lazy"></div>
+              <figcaption>Hype Gold</figcaption>
+            </figure>
+            <figure class="product" data-cat="energy" data-name="Hype Marshmallow">
+              <div class="thumb"><img src="./energy/Hype-Marshmallow-600x600.png" alt="Hype Marshmallow" width="300" height="300" loading="lazy"></div>
+              <figcaption>Hype Marshmallow</figcaption>
+            </figure>
+            <figure class="product" data-cat="energy" data-name="Hype Maximum">
+              <div class="thumb"><img src="./energy/Hype-Maximum-600x600.png" alt="Hype Maximum" width="300" height="300" loading="lazy"></div>
+              <figcaption>Hype Maximum</figcaption>
+            </figure>
+            <figure class="product" data-cat="energy" data-name="Hype Mojito">
+              <div class="thumb"><img src="./energy/Hype-Mojito-600x600.png" alt="Hype Mojito" width="300" height="300" loading="lazy"></div>
+              <figcaption>Hype Mojito</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="group" data-group="soft" aria-labelledby="g-soft">
+          <h3 id="g-soft" data-i18n="gSoft">Soft Drinks & Water</h3>
+          <div class="grid">
+            <figure class="product" data-cat="soft" data-name="Pamir Cola">
+              <div class="thumb"><img src="./soft drinks/Pamir-Cola-Cola-600x600.png" alt="Pamir Cola" width="300" height="300" loading="lazy"></div>
+              <figcaption>Pamir Cola</figcaption>
+            </figure>
+            <figure class="product" data-cat="soft" data-name="Cola Black">
+              <div class="thumb"><img src="./soft drinks/Colablack.png" alt="Cola Black" width="300" height="300" loading="lazy"></div>
+              <figcaption>Cola Black</figcaption>
+            </figure>
+            <figure class="product" data-cat="soft" data-name="Cola Green">
+              <div class="thumb"><img src="./soft drinks/ColaGreen.png" alt="Cola Green" width="300" height="300" loading="lazy"></div>
+              <figcaption>Cola Green</figcaption>
+            </figure>
+            <figure class="product" data-cat="soft" data-name="Cola Yellow">
+              <div class="thumb"><img src="./soft drinks/ColaYellow.png" alt="Cola Yellow" width="300" height="300" loading="lazy"></div>
+              <figcaption>Cola Yellow</figcaption>
+            </figure>
+            <figure class="product" data-cat="soft" data-name="Cola Light">
+              <div class="thumb"><img src="./soft drinks/Pamir-Cola-Light-600x600.png" alt="Cola Light" width="300" height="300" loading="lazy"></div>
+              <figcaption>Cola Light</figcaption>
+            </figure>
+            <figure class="product" data-cat="soft" data-name="Cola Lemon-Lime">
+              <div class="thumb"><img src="./soft drinks/Pamir-Cola-Lemon-Lime-600x600.png" alt="Cola Lemon-Lime" width="300" height="300" loading="lazy"></div>
+              <figcaption>Cola Lemon-Lime</figcaption>
+            </figure>
+            <figure class="product" data-cat="soft" data-name="Cola Orange">
+              <div class="thumb"><img src="./soft drinks/Pamir-Cola-Orange-600x600.png" alt="Cola Orange" width="300" height="300" loading="lazy"></div>
+              <figcaption>Cola Orange</figcaption>
+            </figure>
+            <figure class="product" data-cat="soft" data-name="Mineral Water">
+              <div class="thumb"><img src="./soft drinks/Products370X370.png" alt="Mineral Water" width="300" height="300" loading="lazy"></div>
+              <figcaption>Mineral Water</figcaption>
+            </figure>
+          </div>
+        </section>
+        <section class="group" data-group="chips" aria-labelledby="g-chips">
+          <h3 id="g-chips" data-i18n="gChips">Havas Chips & Popcorn</h3>
+          <div class="grid">
+            <figure class="product" data-cat="chips" data-name="Havas Chips Chili">
+              <div class="thumb"><img src="./chips/chips-havas-chili.png" alt="Havas Chips Chili" width="300" height="300" loading="lazy"></div>
+              <figcaption>Havas Chips Chili</figcaption>
+            </figure>
+            <figure class="product" data-cat="chips" data-name="Havas Chips Salt">
+              <div class="thumb"><img src="./chips/chips-havas-salt.png" alt="Havas Chips Salt" width="300" height="300" loading="lazy"></div>
+              <figcaption>Havas Chips Salt</figcaption>
+            </figure>
+            <figure class="product" data-cat="chips" data-name="Havas Chips Vinegar">
+              <div class="thumb"><img src="./chips/Havas-Chips-Vinegar.png" alt="Havas Chips Vinegar" width="300" height="300" loading="lazy"></div>
+              <figcaption>Havas Chips Vinegar</figcaption>
+            </figure>
+            <figure class="product" data-cat="chips" data-name="Havas Chips Yoghurt &amp; Basil">
+              <div class="thumb"><img src="./chips/havas-chips-yoghurt-and-basil.png" alt="Havas Chips Yoghurt &amp; Basil" width="300" height="300" loading="lazy"></div>
+              <figcaption>Havas Chips Yoghurt &amp; Basil</figcaption>
+            </figure>
+            <figure class="product" data-cat="chips" data-name="Popcorn Salty">
+              <div class="thumb"><img src="./chips/Popcorn-Salty.png" alt="Popcorn Salty" width="300" height="300" loading="lazy"></div>
+              <figcaption>Popcorn Salty</figcaption>
+            </figure>
+            <figure class="product" data-cat="chips" data-name="Popcorn Vinegar">
+              <div class="thumb"><img src="./chips/Popcorn-Vinegar.png" alt="Popcorn Vinegar" width="300" height="300" loading="lazy"></div>
+              <figcaption>Popcorn Vinegar</figcaption>
+            </figure>
+            <figure class="product" data-cat="chips" data-name="Popcorn Ketchup">
+              <div class="thumb"><img src="./chips/popcorn-kitchup.png" alt="Popcorn Ketchup" width="300" height="300" loading="lazy"></div>
+              <figcaption>Popcorn Ketchup</figcaption>
+            </figure>
+          </div>
+        </section>
+        <div id="emptyState" class="empty" hidden>
+          <p data-i18n="noResults">No products match your search.</p>
+          <button id="resetFilters" class="btn" type="button" data-i18n="showAll">Show all products</button>
         </div>
-        <!-- --------------------------Soft Drinks--------------------- -->
-        <h3 data-key="header35">Soft Drinks</h3>
-        <div class="soft-drinks container">
-        <div>
-            <p>Cola Black</p>
-            <img src="./soft drinks/Colablack.png" alt="">
-        </div>
-            <div>
-            <p>Cola Green</p>
-            <img src="./soft drinks/ColaGreen.png" alt="">
-        </div>
-        <div>
-            <p>Cola Yellow</p>
-            <img src="./soft drinks/ColaYellow.png" alt="">
-        </div>
-        <div>
-            <p>Cola</p>
-            <img src="./soft drinks/Pamir-Cola-Cola-600x600(1).png" alt="">
-        </div>
-        <div>
-            <p>Cola Lemon</p>
-            <img src="./soft drinks/Pamir-Cola-Lemon-Lime-600x600(1).png" alt="">
-        </div>
-        <div>
-            <p>Cola Light</p>
-            <img src="./soft drinks/Pamir-Cola-Light-600x600.png" alt="">
-        </div>
-        <div>
-            <p>Cola Orange</p>
-            <img src="./soft drinks/Pamir-Cola-Orange-600x600(1).png" alt="">
-        </div>
-        <div>
-            <p>Cola</p>
-            <img src="./soft drinks/Pamir-Cola-Cola-600x600.png" alt="">
-        </div>
-        <div>
-            <p>Cola Lemon</p>
-            <img src="./soft drinks/Pamir-Cola-Lemon-Lime-600x600.png" alt="">
-        </div>
-        <div>
-            <p>Cola Orange</p>
-            <img src="./soft drinks/Pamir-Cola-Orange-600x600.png" alt="">
-        </div>
-        <div>
-            <p>Mineral Water</p>
-            <img src="./soft drinks/Products370X370.png" alt="">
-        </div>
-        </div>
-        <!-- -------------------------Chips----------------------- -->
-        <h3 data-key="header36">Chips</h3>
-        <div class="chips container">
-        <div>
-            <p>Chips - chili</p>
-            <img src="./chips/chips-havas-chili.png" alt="">
-        </div>
-        <div>
-            <p>Chips - salt</p>
-            <img src="./chips/chips-havas-salt.png" alt="">
-        </div>
-        <div>
-            <p>Chips - vineger</p>
-            <img src="./chips/Havas-Chips-Vinegar.png" alt="">
-        </div>
-        <div>
-            <p>Youhurt and Basil</p>
-            <img src="./chips/havas-chips-yoghurt-and-basil.png" alt="">
-        </div>
-        <div>
-            <p>Popcorn - salty</p>
-            <img src="./chips/Popcorn-Salty.png" alt="">
-        </div>
-        <div>
-            <p>Popcorn - vinegar</p>
-            <img src="./chips/Popcorn-Vinegar.png" alt="">
-        </div>
-        <div>
-            <p>Popcorn - kitchup</p>
-            <img src="./chips/popcorn-kitchup.png" alt="">
-        </div>
-        </div>
+      </div>
     </section>
 
-    <section id="video">
-        <h3 data-key="video1"><span>Havas chpis!</span><br>
-        Share the Love ❤♥♥</h3>
+    <section class="promo-band section" aria-label="Featured">
+      <div class="container promo-grid">
+        <div class="promo reveal">
+          <h3 data-i18n="promo2"><span class="brand-text">Pamir<span>Cola</span></span> Every Morning starts with Hi Dairy!</h3>
+        </div>
+      </div>
+    </section>
+
+    <section id="brands" class="section container" aria-labelledby="brands-title">
+      <div class="section-head reveal">
+        <h2 id="brands-title" data-i18n="brandsTitle">Our Brands</h2>
+        <p data-i18n="brandsLead">Trusted names from the Pamir Cola family.</p>
+      </div>
+      <ul class="logos reveal">
+        <li><img src="./image/hi-logo.png" alt="Hi Dairy logo" width="150" height="100" loading="lazy"></li>
+        <li><img src="./image/Brand_01.jpg" alt="Pamir Cola group brand logo 1" width="150" height="100" loading="lazy"></li>
+        <li><img src="./image/Brand_02.jpg" alt="Pamir Cola group brand logo 2" width="150" height="100" loading="lazy"></li>
+        <li><img src="./image/hawas-logo.png" alt="Havas logo" width="150" height="100" loading="lazy"></li>
+        <li><img src="./image/Brand_07.jpg" alt="Pamir Cola group brand logo 3" width="150" height="100" loading="lazy"></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
         <div>
-            <img src="./image/image.jpg" alt="havas chips">
+          <div class="footer-brand">Pamir<span>Cola</span></div>
+          <p data-i18n="fTag" style="margin-top:8px">Juices, dairy, soft drinks and snacks from Afghanistan.</p>
+          <div class="footer-support">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+            <div>
+              <small data-i18n="fSupport">Customer support</small>
+              <a href="tel:+93797131422" dir="ltr">+93 797 131 422</a>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <section id="video">
+        <nav aria-label="Footer">
+          <h2 data-i18n="fQuick">Quick links</h2>
+          <ul>
+            <li><a href="index.html" data-i18n="navHome">Home</a></li>
+            <li><a href="index.html#products" data-i18n="navProducts">Products</a></li>
+            <li><a href="about-us.html" data-i18n="navAbout">About Us</a></li>
+            <li><a href="videos.html" data-i18n="navVideos">Videos</a></li>
+            <li><a href="about-us.html#contact" data-i18n="fContact">Contact form</a></li>
+          </ul>
+        </nav>
+
+        <nav aria-label="Company">
+          <h2 data-i18n="fCompany">Company</h2>
+          <ul>
+            <li><a href="about-us.html#branches" data-i18n="fBranches">Branches</a></li>
+            <li><a href="about-us.html#mission" data-i18n="fMission">Mission</a></li>
+            <li><a href="about-us.html#vision" data-i18n="fVision">Vision</a></li>
+            <li><a href="about-us.html#values" data-i18n="fValues">Values</a></li>
+          </ul>
+        </nav>
+
         <div>
-            <video autoplay muted loop width="500">
-            <source src="./videos/Hi_Dairy(1080p).mp4" type="video/mp4">
-            </video>
+          <h2 data-i18n="fVisit">Visit us</h2>
+          <ul>
+            <li><span data-i18n="fAddress">Herat, Afghanistan — Behzad #1, Behzad Street</span></li>
+            <li><a href="tel:+93797131422" dir="ltr">+93 797 131 422</a></li>
+            <li><a href="mailto:info@pamircola-co.com" dir="ltr">info@pamircola-co.com</a></li>
+            <li data-i18n="fHours">Open 7 days a week, from 10:00 am</li>
+          </ul>
         </div>
-        <h3 data-key="video2">Everything start with <span>Hi Dairy!</span></h3>
-    </section>
+      </div>
+    </div>
+    <div class="copy-right">
+      <div class="container">&copy; <span class="year">2025</span> <strong>PamirCola</strong>. <span data-i18n="fRights">All rights reserved. Developed by Sherzad Oryakhil</span></div>
+    </div>
+  </footer>
 
-    <section id="brands">
-        <div class="brands-container">
-           <h2 data-key="brands">Our Brands</h2>
-           <div class="brands-image" id="brands-image">
-            <img src="./image/hi-logo.png" alt="hi logo">
-            <img src="./image/Brand_01.jpg" alt="">
-            <img src="./image/Brand_02.jpg" alt="">
-            <img src="./image/hawas-logo.png" alt="">
-            <img src="./image/Brand_07.jpg" alt="">
-        </div>
-    </section>
+  <button id="toTop" class="to-top" type="button" data-i18n-aria="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 15 7-7 7 7"/></svg></button>
 
-    <section id="footer">
-        <div class="first">
-            <ul>
-                <li><img src="./image/343444-2.png" alt=""></li>
-            </ul>
-            <ul>
-                <li><img src="./svgs/phone-svgrepo-com.svg" alt="" width="25px"></li>
-            </ul>
-            <ul>
-                <li class="border-animation">Customer Suport?<br>
-                0093797131422</li>
-            </ul>
-        </div>
-        <div class="second">
-            <ul>
-                <li><img src="./svgs/mail_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="mail icon"></li>
-                <li><h3 class="border-animation">Usefull Links</h3></li>
-                <li class="border-animation">Branches</li>
-                <li class="border-animation">Mission</li>
-                <li class="border-animation">Vision</li>
-                <li class="border-animation">History</li>
-                <li class="border-animation">Contact us</li>
-            </ul>
-            <ul>
-                <li><img src="./svgs/mail_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="mail icon"></li>
-                <li><h3 class="border-animation">Other Links</h3></li>
-                <li class="border-animation">Chairman message</li>
-                <li class="border-animation">Values</li>
-                <li class="border-animation">Certificates</li>
-                <li class="border-animation">Machinereis</li>
-            </ul>
-            <ul>
-                <li><img src="./svgs/location_on_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="location icon"></li>
-                <li><h3 class="border-animation">Office Address</h3></li>
-                <li class="border-animation">Heart, Afghanistan<br>
-                Behzad #1, Behzad Street</li>
-                <li class="border-animation">Phone: 0093797131422</li>
-                <li class="border-animation">Email: info@pamircola-co.com</li>
-                <li class="border-animation">Hours: 7 Days a week from 10:00 am</li>
-            </ul>
-        </div>
-        <div class="copy-right">
-            <ul>
-                <li>Copyright &copy; 2025 <b>Pamircola</b>. all rights reversed</li>
-            </ul>
-        </div>
-    </section>
-    <!-- <script src="../19 - jQuery/jquery-3.7.1.min.js"></script> -->
-    <!-- <script src="stylesheet" href="../Bootstrap Files/js/bootstrap.bundle.min.js"></script> -->
-    <script src="index.js" charset="utf-8"></script>
+  <script src="./script.js"></script>
 </body>
 </html>
